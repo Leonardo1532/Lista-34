@@ -24,34 +24,27 @@
 // Entrada: “Aula”  Saída:“) ( ( )”
 
 
-// function ConverterPalavra(palavra: string): void {
+function ConverterPalavra(palavra: string): void {
 
-//     let concatenar: string = ("")
-//     let palavraMinúscula = palavra.toLowerCase()
-//     let arrayPalavra = palavraMinúscula.split("")
-//     console.log(arrayPalavra)
+    let palavraMinúscula = palavra.toLowerCase()
+    let arrayPalavra = palavraMinúscula.split("")
+    console.log(arrayPalavra)
+    let novoArray: string[] = []
+    for (let index = 0; index < arrayPalavra.length; index++) {
 
+        for (let index2 = 0; index2 < arrayPalavra.length; index2++) {
 
-//     for (let index = 0; index < arrayPalavra.length; index++) {
+            if (arrayPalavra[index] == arrayPalavra[index2] && index != index2) {
+                novoArray[index] = ")"
+                novoArray[index2] = ")"
 
-//         for (let index2 = 0; index2 < arrayPalavra.length; index2++) {
-
-//             if (arrayPalavra[index] == arrayPalavra[index2] && index != index2) {
-//                 arrayPalavra[index] = ")"
-
-//             } else if (arrayPalavra[index] != "(" && arrayPalavra[index] != ")") {
-//                 arrayPalavra[index] = "("
-//             }
-
-//             if (index == 0) {
-//                 concatenar = arrayPalavra[index]
-//             } else {
-//                 concatenar = concatenar + arrayPalavra[index]
-//             }
-//         }
-//     }
-//     console.log(concatenar)
-// }
+            } else if (novoArray[index] != ")") {
+                novoArray[index] = "("
+            }
+        }
+    }
+    console.log(novoArray.join(""))
+}
 
 // 3. Faça uma função que recebe dois parâmetros: um número inteiro positivo ”n” e um
 // dígito “d” entre 0 e 9. A função deve calcular o quadrado de todos os números entre

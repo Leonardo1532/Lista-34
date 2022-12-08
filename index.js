@@ -18,27 +18,24 @@
 // Entrada: “teste” Saída:“) ) ( ) )”
 // Entrada: “tech”  Saída:“( ( ( (”
 // Entrada: “Aula”  Saída:“) ( ( )”
-// function ConverterPalavra(palavra: string): void {
-//     let concatenar: string = ("")
-//     let palavraMinúscula = palavra.toLowerCase()
-//     let arrayPalavra = palavraMinúscula.split("")
-//     console.log(arrayPalavra)
-//     for (let index = 0; index < arrayPalavra.length; index++) {
-//         for (let index2 = 0; index2 < arrayPalavra.length; index2++) {
-//             if (arrayPalavra[index] == arrayPalavra[index2] && index != index2) {
-//                 arrayPalavra[index] = ")"
-//             } else if (arrayPalavra[index] != "(" && arrayPalavra[index] != ")") {
-//                 arrayPalavra[index] = "("
-//             }
-//             if (index == 0) {
-//                 concatenar = arrayPalavra[index]
-//             } else {
-//                 concatenar = concatenar + arrayPalavra[index]
-//             }
-//         }
-//     }
-//     console.log(concatenar)
-// }
+function ConverterPalavra(palavra) {
+    var palavraMinúscula = palavra.toLowerCase();
+    var arrayPalavra = palavraMinúscula.split("");
+    console.log(arrayPalavra);
+    var novoArray = [];
+    for (var index = 0; index < arrayPalavra.length; index++) {
+        for (var index2 = 0; index2 < arrayPalavra.length; index2++) {
+            if (arrayPalavra[index] == arrayPalavra[index2] && index != index2) {
+                novoArray[index] = ")";
+                novoArray[index2] = ")";
+            }
+            else if (novoArray[index] != ")") {
+                novoArray[index] = "(";
+            }
+        }
+    }
+    console.log(novoArray.join(""));
+}
 // 3. Faça uma função que recebe dois parâmetros: um número inteiro positivo ”n” e um
 // dígito “d” entre 0 e 9. A função deve calcular o quadrado de todos os números entre
 // 0 e “n”, e depois contar quantas vezes o dígito “d” aparece nos resultados das
