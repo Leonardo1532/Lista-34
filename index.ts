@@ -6,12 +6,13 @@
 //Entrada: Funcao(estudo, abc)
 //Saída:false
 
-
-// function RetornarFinal(palavra: string, final: string): boolean {
-//     if () {
-
-//     }
-// }
+function RetornarFinal(palavra: string, final: string): boolean {
+    if (palavra.endsWith(final)) {
+        return true
+    } else {
+        return false
+    }
+}
 
 // 2. Faça uma função que receba uma string como parâmetro, e deve converter para
 // uma nova string onde cada caractere deve ser substituído por:
@@ -22,7 +23,6 @@
 // Entrada: “teste” Saída:“) ) ( ) )”
 // Entrada: “tech”  Saída:“( ( ( (”
 // Entrada: “Aula”  Saída:“) ( ( )”
-
 
 function ConverterPalavra(palavra: string): void {
 
@@ -75,7 +75,7 @@ function CalcularQuadrado(numero: number, digito: number): void {
     let stringNumeros = String(Quadrados)
     let digitoString = String(digito)
     let arrayString = stringNumeros.split(",")
-    
+
     for (let index = 0; index < arrayString.length; index++) {
         if (index == 0) {
             concatenar = arrayString[index]
@@ -100,5 +100,5 @@ function CalcularQuadrado(numero: number, digito: number): void {
     }
     let concatenarNumber = concatenar2
 
-    console.log(quantidadeDigito + " " + "("+concatenarNumber+")")
+    console.log(quantidadeDigito + " " + "(" + concatenarNumber + ")")
 }

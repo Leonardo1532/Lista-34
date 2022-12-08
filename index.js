@@ -5,10 +5,14 @@
 //Saída:true
 //Entrada: Funcao(estudo, abc)
 //Saída:false
-// function RetornarFinal(palavra: string, final: string): boolean {
-//     if () {
-//     }
-// }
+function RetornarFinal(palavra, final) {
+    if (palavra.endsWith(final)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
 // 2. Faça uma função que receba uma string como parâmetro, e deve converter para
 // uma nova string onde cada caractere deve ser substituído por:
 // “(“ se aparece apenas uma vez na string original ou 
